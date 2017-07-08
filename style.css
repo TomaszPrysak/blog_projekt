@@ -1,33 +1,108 @@
 ﻿
-	div.posty	{
-				margin: auto;
-				width: 67%;
-				background-color: white;
-				}
+	/*---Osadzanie czcionek (gdybym znalazł jakąś fajną)----------*/
+	/*                     */
+	/* Czcionka dla postów */
+	@font-face {
+				font-family: "font_posty";
+				src: url("czcionki/");
+	}		
+	/* Czcionka dla nagłówków */				
+	@font-face {
+				font-family: "font_nagłówki";
+				src: url("czcionki/");
+	}
 	
-	div.img	{
-			;
-			}
-				
+	/*---Formatowanie sekcji body - ogólnie----------*/
 	body	{
-			background-color: rgb(255,173,19);
-			}
+			background-color: rgb(255,160,50);
+	}
+				
+	/*---Formatowanie obszarów----------*/
+	/*                                */
+	/* Styl sekcji postów ze zdjęciem */
+	.posty_ze_zdjęciem	{
+						margin: auto;
+						max-width: 1000px;
+						background-color: rgb(230,230,230);
+						padding-bottom: 15px;
+						margin-bottom: 35px;
+	}						
+	/* Styl sekcji postów bez zdjęcia */
+	.posty_bez_zdjęcia	{
+						margin: auto;
+						max-width: 1000px;
+						background-color: rgb(230,230,230);
+						padding-top: 10px;
+						padding-bottom: 15px;
+						margin-bottom: 35px;
+	}
+	/* Styl sekcji stopki */
+	.stopka_sekcja	{
+					margin: auto;
+					max-width: 1000px;
+					background-color: rgb(30,30,30);
+					padding-bottom: 1px;
+					margin-bottom: 17.5px;
+					padding-top: 1px;
+	}
 			
-	h1, h2	{
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			letter-spacing: 0px;
-			text-align: center;
-			}
+	/*---Formatowanie obrazów----------*/
+	/*                                 */	
+	/* Styl zdjęć jako okładki postów */
+	.okładki_postów	{
+					width: 100%;
+					height: auto;
+	}
+	.img_stopka	{
+				width: 100px;
+				height: auto;
+				position: relative;
+				left: 45%;			
+	}
 			
-	p	{
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		font-size: 17px;
-		text-align: left;
-		line-height: 1.5;
-		letter-spacing: 0px;
-		word-spacing: 1px;
-		margin-left: 20%;
-		margin-right: 20%;
-		}
-			
+	/*---Formatowanie nagłówków----------*/
+	/*                                   */	
+	/* Style tekstu nagłówka głównego na samej górze strony */
+	.nagłówek_strony	{
+						font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+						text-align: center;
+						color: rgb(30,30,30);
+	}			
+	/* Style tekstu nagłówka używanego do postów */
+	.nagłówek_posta	{
+						font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+						text-align: center;
+						color: rgb(30,30,30);
+	}
+		
+	/*---Formatowanie akapitów----------*/
+	/*                                  */
+	/* Styl tekstu używanego do postów */
+	.posty_tekst	{
+					font-family: 'PT Serif', Georgia, Times, serif;
+					font-size: 18px;
+					text-align: left;
+					line-height: 1.6;
+					margin-left: 15%;
+					margin-right: 15%;
+	}
+	/* Styl tekstu używanego do stopki */
+	.stopka_tekst	{
+					font-family: 'PT Serif', Georgia, Times, serif;
+					font-size: 13px;
+					text-align: center;
+					color: rgb(230,230,230);
+	}
 	
+	/*---Formatowanie linków----------*/
+	/*                                */
+	/*---Format linków w stopce----------*/
+	.linki_stopka	{
+					color: rgb(230,230,230);
+					text-decoration: none;
+	}
+	a:hover	{
+			color: rgb(30,30,30);
+			background-color: rgb(230,230,230);
+			text-decoration: none;
+	}
