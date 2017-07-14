@@ -1,108 +1,224 @@
 ﻿
-	/*---Osadzanie czcionek (gdybym znalazł jakąś fajną)----------*/
+	/*---Osadyanie czcionek (w razie czego)----------*/
 	/*                     */
-	/* Czcionka dla postów */
 	@font-face {
 				font-family: "font_posty";
 				src: url("czcionki/");
-	}		
-	/* Czcionka dla nagłówków */				
-	@font-face {
-				font-family: "font_nagłówki";
-				src: url("czcionki/");
 	}
 	
+	/*---Czcionki---*/
+	/* font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; */
+	/* font-family: 'PT Serif', Georgia, Times, serif;	*/
+	/* font-family: Consolas, monospace; */
+	/* font-family: "swister-regular", Helvetica, Arial, sans-serif; */
+	/* font-family: 'Proxima-Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif */
+	/* -------------------------------- */
+	
 	/*---Formatowanie sekcji body - ogólnie----------*/
-	body	{
-			background-color: rgb(255,160,50);
+	.background	{
+				background-color: white;
 	}
-				
-	/*---Formatowanie obszarów----------*/
+	/* ---------------------------------------- */		
+
+	/*---Formatowanie BOXÓW----------*/
 	/*                                */
-	/* Styl sekcji postów ze zdjęciem */
-	.posty_ze_zdjęciem	{
-						margin: auto;
-						max-width: 1000px;
-						background-color: rgb(230,230,230);
-						padding-bottom: 15px;
-						margin-bottom: 35px;
-	}						
-	/* Styl sekcji postów bez zdjęcia */
-	.posty_bez_zdjęcia	{
-						margin: auto;
-						max-width: 1000px;
-						background-color: rgb(230,230,230);
-						padding-top: 10px;
-						padding-bottom: 15px;
-						margin-bottom: 35px;
+	/* Styl podstawowego boxa strony */
+	.box	{
+			margin: auto;
+			max-width: 1000px;
 	}
-	/* Styl sekcji stopki */
-	.stopka_sekcja	{
+	/* Styl boxów postów bez zdjęcia */
+	.box_post_przypięty{
+						background-color: #ff6600;
+						padding-top: 15px;
+						padding-bottom: 15px;
+						margin-top: 35px;
+	}
+	.box_post	{
+				background-color: #eaeaea;
+				padding-top: 5px;
+				padding-bottom: 30px;
+				margin-top: 35px;
+	}
+	/* Styl boxów postów ze zdjęciem */
+	.box_post_img	{
+					background-color: #eaeaea;
+					padding-bottom: 30px;
+					margin-top: 35px;
+	}	
+	/* Stylko boxa stopki każdego postu */
+	.box_post_stopka{
+					background-color: #eaeaea;
+	}	
+	/* Styl boxa całej stopki całej strony */
+	.box_stopka	{
+				background-color: rgb(30,30,30);
+				padding-top: 1px;
+				padding-bottom: 1px;
+				margin-top: 35px;
+				margin-bottom: 15px;
+	}
+	/* Styl boxa do umieszczenia obrazka w stopce, stworzony z konieczności dopasowania obrazka do stopki i wyśrodkowania go w stopce */
+	.box_stopka_img	{
 					margin: auto;
-					max-width: 1000px;
+					max-width: 100px;
 					background-color: rgb(30,30,30);
-					padding-bottom: 1px;
-					margin-bottom: 17.5px;
-					padding-top: 1px;
 	}
-			
+	/* ---------------------------------------------- */
+	
 	/*---Formatowanie obrazów----------*/
 	/*                                 */	
-	/* Styl zdjęć jako okładki postów */
-	.okładki_postów	{
-					width: 100%;
-					height: auto;
+	/* Styl zdjęć jako odkładka do postów oraz jako zdjęcia w postach */
+	.img	{
+			width: 100%;
+			height: auto;
 	}
+	/* Styl zdjęcia w stopce */
 	.img_stopka	{
 				width: 100px;
 				height: auto;
-				position: relative;
-				left: 45%;			
 	}
-			
-	/*---Formatowanie nagłówków----------*/
-	/*                                   */	
-	/* Style tekstu nagłówka głównego na samej górze strony */
-	.nagłówek_strony	{
-						font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-						text-align: center;
-						color: rgb(30,30,30);
-	}			
-	/* Style tekstu nagłówka używanego do postów */
-	.nagłówek_posta	{
-						font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
-						text-align: center;
-						color: rgb(30,30,30);
+	/* ------------------- */	
+	
+	/* MENU */
+	/* --------------------- */
+	/* Styl listy nieuporządkowanej stosowanej do menu */
+	.navi 	{
+			font-family: 'PT Serif', Georgia, Times, serif;
+			font-size: 15px;
+			background-color: rgb(30,30,30);
+			list-style-type: none;
+			overflow: hidden;
+			margin: 0px;
+			padding: 0px;
 	}
-		
-	/*---Formatowanie akapitów----------*/
+	.navi a	{
+			float: left;
+			color: #ff6600;
+			padding: 15px;
+			text-align: center;
+			text-decoration: none;
+	}
+	.navi a:hover	{
+					color: rgb(30,30,30);
+					color: white;
+					background-color: #ff6600;
+	}
+	/* --------------------- */
+	
+	/*---Formatowanie tekstu----------*/
 	/*                                  */
 	/* Styl tekstu używanego do postów */
-	.posty_tekst	{
-					font-family: 'PT Serif', Georgia, Times, serif;
-					font-size: 18px;
-					text-align: left;
-					line-height: 1.6;
-					margin-left: 15%;
-					margin-right: 15%;
+	.txt_post	{
+				font-family: 'PT Serif', Georgia, Times, serif;
+				font-size: 18px;
+				text-align: left;
+				line-height: 1.6;
+				margin-left: 15%;
+				margin-right: 15%;
+				color: rgb(30,30,30);
 	}
-	/* Styl tekstu używanego do stopki */
-	.stopka_tekst	{
-					font-family: 'PT Serif', Georgia, Times, serif;
-					font-size: 13px;
+	/* Styl tekstu używanego w poście przypiętym na górze strony, który będzie na samej górze z powodu jakiejś treści */
+	.txt_post_przypięty	{
+						font-family: 'PT Serif', Georgia, Times, serif;
+						font-size: 18px;
+						text-align: left;
+						line-height: 1.6;
+						margin-left: 15%;
+						margin-right: 15%;
+						color: white;
+	}
+	/* Style tekstu nagłówka głównego na samej górze strony oraz nagłówków postów */
+	.txt_nagłówka	{
+					font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 					text-align: center;
-					color: rgb(230,230,230);
+					color: rgb(30,30,30);
 	}
+	/* Styl tekstu używanego do daty w poście */
+	.txt_data	{
+				font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+				font-size: 15px;
+				text-align: center;
+				color: rgb(30,30,30);
+	}
+	/* Styl tekstu używanego w stopce w jej dolnej część */
+	.txt_stopka_1	{
+					font-family: 'PT Serif', Georgia, Times, serif;
+					font-size: 15px;
+					text-align: center;
+					color: #eaeaea;
+					text-decoration: none;
+	}
+	/* Styl tekstu używanego w stopce w jej górnej części */
+	.txt_stopka_2	{
+					font-family: 'PT Serif', Georgia, Times, serif;
+					font-size: 15px;
+					text-align: center;
+					color: #eaeaea;
+					text-decoration: none;
+					margin-right: 4px;
+					padding: 4px
+	}
+	/* Styl tekstu aktualnej strony (zarówno w stopce jako nr strony jak i w menu) */
+	.txt_aktywny	{
+					color: rgb(30,30,30);
+					background-color: rgb(234,255,110);
+	}
+	/* Style tekstu do tagópoście */
+	.txt_tagi	{
+				font-family: Consolas, monospace;
+				font-size: 15px;
+				text-align: left;
+				text-decoration: none;
+				padding: 3px;
+				margin-left: 15%;
+				margin-right: 15%;
+	}
+	/* ----------------------------------------------------- */
 	
 	/*---Formatowanie linków----------*/
 	/*                                */
-	/*---Format linków w stopce----------*/
-	.linki_stopka	{
-					color: rgb(230,230,230);
+	/* Styl linków w stopce każdego posta */
+	.linki_post_stopka_tagi	{
+							color: #ff6600;
+	}
+	.linki_post_stopka_tagi:hover	{
+									color: white;
+									background-color: #ff6600;
+	}
+	/* Styl linków w nagłówkach postów */
+	.linki_nagłówki	{
 					text-decoration: none;
+					color: rgb(30,30,30);
 	}
-	a:hover	{
-			color: rgb(30,30,30);
-			background-color: rgb(230,230,230);
-			text-decoration: none;
+	.linki_nagłówki:hover	{
+							padding-top: 2px;
+							padding-bottom: 2px;
+							color: white;
+							background-color: #ff6600;
+							text-decoration: none;
 	}
+	/* Styl linków w tekście postów */
+	.linki_w_postach	{
+						color: rgb(30,30,30);
+	}
+	.linki_w_postach:hover	{
+							padding-top: 2px;
+							padding-bottom: 2px;
+							color: white;
+							background-color: #ff6600;
+							text-decoration: none;
+	}
+	/*---Styl linków w stopce strony w jej dolnej części----------*/
+	.linki_stopka_1:hover	{
+							color: rgb(30,30,30);
+							background-color: rgb(234,255,110);
+							padding-top: 2.5px;
+							padding-bottom: 2.5px;
+	}
+	/*---Styl linków w stopce strony w jej górnej części----------*/
+	.linki_stopka_2:hover	{
+							color: rgb(30,30,30);
+							background-color: rgb(234,255,110);
+	}
+	/* ----------------------------------------------------- */
